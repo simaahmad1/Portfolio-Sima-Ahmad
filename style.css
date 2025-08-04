@@ -1,0 +1,243 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #edd5c0;
+  margin: 0;
+}
+
+.s-hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #edd5c0;
+  cursor: none;
+  color: #84572f;
+  font-family: "Fira Sans", sans-serif;
+}
+.s-hero .s__title {
+  position: absolute;
+  top: 2vw;
+  left: 2vw;
+  margin: 0;
+  padding: 0;
+  font-size: 1.25vw;
+}
+.s-hero .s__catcher {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-weight: 700;
+  font-size: 13vw;
+  letter-spacing: -0.025em;
+  text-align: center;
+  white-space: nowrap;
+}
+.s-hero .s__burger {
+  position: absolute;
+  top: 2vw;
+  right: 2vw;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 101;
+}
+.s-hero .s__burger__line {
+  width: 32px;
+  height: 4px;
+  background: #84572f;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+
+.s-scene {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #84572f;
+  -webkit-mask: url(#mask);
+          mask: url(#mask);
+  color: #edd5c0;
+  pointer-events: none;
+}
+.s-scene .s__title {
+  position: absolute;
+  top: 2vw;
+  right: 2vw;
+  left: 2vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-weight: 700;
+  font-size: 13vw;
+  letter-spacing: -0.025em;
+  line-height: 0.9;
+}
+.s-scene .s__title__line:nth-child(2) {
+  margin-left: auto;
+}
+.s-scene .s__word {
+  --max-scale: 3;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  font-family: "Climate Crisis", sans-serif;
+  font-size: 20vw;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+@-webkit-keyframes char-scale {
+  0% {
+    scale: 1 0.1;
+  }
+  50% {
+    scale: 1 var(--max-scale);
+  }
+  100% {
+    scale: 1 0.1;
+  }
+}
+@keyframes char-scale {
+  0% {
+    scale: 1 0.1;
+  }
+  50% {
+    scale: 1 var(--max-scale);
+  }
+  100% {
+    scale: 1 0.1;
+  }
+}
+.s-scene .s__word__char {
+  -webkit-animation: char-scale 1.25s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+          animation: char-scale 1.25s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+  transform-origin: 50% 86.5%;
+}
+.s-scene .s__word__char:nth-child(1) {
+  color: #b3d9e0;
+}
+.s-scene .s__word__char:nth-child(2) {
+  color: #92ada4;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+.s-scene .s__word__char:nth-child(3) {
+  color: #f2d6a1;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.cursor {
+  position: fixed;
+  top: -1.5vw;
+  left: -1.5vw;
+  z-index: 2;
+  width: 3vw;
+  height: 3vw;
+  background: #f1a805;
+  border-radius: 50%;
+  transform: translate3d(var(--x), var(--y), 0);
+  pointer-events: none;
+}
+
+.s-svg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 220px;
+  height: 100vh;
+  background: #edd5c0;
+  box-shadow: -2px 0 16px #84572f;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(.7,0,.3,1);
+  z-index: 100;
+  padding-top: 80px;
+}
+.menu.open {
+  transform: translateX(0);
+}
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu li {
+  margin: 24px 0;
+  text-align: center;
+}
+.menu a {
+  color: #84572f;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+}
+.s__burger {
+  cursor: pointer;
+  z-index: 101;
+}
+.cloneable {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.text-draw {
+  text-decoration: none;
+  color: #84572f;
+  font-size: 2rem;
+  font-weight: 700;
+  position: relative;
+  transition: color 0.2s;
+}
+.text-draw:hover {
+  color: #92ada4;
+}
+.text-draw__box {
+  margin-top: 8px;
+  height: 41px;
+  width: 310px;
+  display: block;
+}
+.text-draw__box-svg {
+  width: 100%;
+  height: 41px;
+  display: block;
+}
+.text-draw__p {
+  margin: 0;
+  text-align: center;
+}
+h3#quote {
+  color: #b3d9e0;
+  font-size: clamp(2rem, 6rem, 5vw);
+  max-width: 45ch;
+  opacity: 0;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects</title>
+  <link rel="stylesheet" href="projects.css">
+  <link rel="stylesheet" href="about.css">
+  <!-- Add GSAP and SplitType if needed -->
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+  <script src="projects.js"></script>
+</head>
+<body>
+     <div class="burger-menu" onclick="window.location.href='menu.html'">
+    <div class="burger-line"></div>
+    <div class="burger-line"></div>
+    <div class="burger-line"></div>
+  </div>
+  <div class="theme-toggle" id="theme-toggle"></div>
+
+  <svg style="position: absolute; width: 100%; height: 100%; z-index: 0;" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="dottedGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+        <circle cx="2" cy="2" r="1" fill="rgba(0,0,0,0.15)" />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#dottedGrid)" />
+  </svg>
+
+  <div class="book-title-overlay">
+    <div class="book-title-text">Ten Principles for Good Design</div>
+  </div>
+
+  <div class="shelf-container">
+    <div class="book-shadow">
+      <div class="book-shadow__item"></div>
+      <div class="book-shadow__item side"></div>
+      <div class="book-shadow__item"></div>
+      <div class="book-shadow__item"></div>
+    </div>
+
+    <div class="shelf"></div>
+
+    <div class="books-wrapper">
+      <div class="books__item">
+        <div class="books__container">
+          <div class="books__cover">
+            <div class="books__back-cover"></div>
+            <div class="books__inside">
+              <div class="books__page"></div>
+              <div class="books__page"></div>
+              <div class="books__page"></div>
+            </div>
+            <div class="books__image">
+              <img src="./projects/rechenmeister.png" alt="Dieter Rams: The Complete Works">
+              <div class="books__effect"></div>
+              <div class="books__light"></div>
+            </div>
+            <div class="books__hitbox" data-book-index="0" data-book-title="Rechenmeister"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="side-book" data-book-index="side" data-book-title="Voyage App">
+        <div class="side-book__title">Voyage Plan</div>
+        <div class="side-book__decoration"></div>
+        <div class="side-book__decoration"></div>
+      </div>
+
+      <div class="books__item">
+        <div class="books__container">
+          <div class="books__cover">
+            <div class="books__back-cover"></div>
+            <div class="books__inside">
+              <div class="books__page"></div>
+              <div class="books__page"></div>
+              <div class="books__page"></div>
+            </div>
+            <div class="books__image">
+              <img src="./projects/musicapp.png" alt="Zen: The Art of Simple Living by Shunmyo Masuno">
+              <div class="books__effect"></div>
+              <div class="books__light"></div>
+            </div>
+            <div class="books__hitbox" data-book-index="1" data-book-title="Music App"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="books__item" id="default-open-book">
+        <div class="books__container">
+          <div class="books__cover">
+            <div class="books__back-cover"></div>
+            <div class="books__inside">
+              <div class="books__page"></div>
+              <div class="books__page"></div>
+              <div class="books__page"></div>
+            </div>
+            <div class="books__image">
+              <img src="./projects/energieanalyse.png" alt="Dieter Rams: Ten Principles for Good Design">
+              <div class="books__effect"></div>
+              <div class="books__light"></div>
+            </div>
+            <div class="books__hitbox" data-book-index="2" data-book-title="Energy Analyses"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="book-descriptions">
+      <div class="book-description" data-book-index="0">
+        <h3>Rechenmeister</h3>
+        <div class="lines-animation">
+          <p>An interactive learning game for children that teaches Roman and Arabic numbers through playful design and physical interaction. <br>
+            The Creative Act is a beautiful and generous course of study that illuminates the path of the artist as a road we all can follow.</p>
+        </div>
+      </div>
+
+      <div class="book-description" data-book-index="side">
+        <h3>Voyage Plan</h3>
+        <div class="lines-animation">
+          <p>A minimal, intuitive travel planner designed for clarity and ease.
+            Built to help users map out their journey without overwhelm — from destinations and packing lists to custom routes and moods.
+            Designed in Figma with a focus on user flow, mobile-first layout, and soft, welcoming visuals.</p>
+        </div>
+      </div>
+
+      <div class="book-description" data-book-index="1">
+        <h3>Music App</h3>
+        <div class="lines-animation">
+          <p>A small mobile concept designed to explore mood-based music browsing and interactive visual feedback.</p>
+        </div>
+      </div>
+
+      <div class="book-description active" data-book-index="2">
+        <h3>Energy Analyses "Landhotel Hirschen"</h3>
+        <div class="lines-animation">
+          <p>Led a comprehensive energy analysis for a rural hotel, focusing on system optimization and sustainability potential.
+            Assessed and proposed improvements for lighting, cooling systems (Kältemittel), and the expansion of photovoltaic installations.
+            Used tools like DialuxEvo, PV*Sol, and Polysun to simulate performance, analyze energy flows, and develop future-ready solutions.
+            Contributed both technically and strategically — from simulations to presenting feasible upgrade paths.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
