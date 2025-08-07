@@ -1,4 +1,3 @@
-// ------- Osmo [https://osmo.supply/] ------- //
 
 gsap.registerPlugin(DrawSVGPlugin);
 
