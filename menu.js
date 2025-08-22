@@ -1,4 +1,18 @@
 
+
+document.fonts.ready.then(() => {
+  gsap.set("#quote", { opacity: 1 });
+
+  // ✅ fixed syntax
+  let mySplitText = new SplitText("#quote", { type: "chars, words" });
+
+  gsap.from(mySplitText.chars, {
+    duration: 2,
+    opacity: 0,
+    stagger: { from: "random", each: 0.01 }
+  });
+});
+
 gsap.registerPlugin(DrawSVGPlugin);
 
 function initDrawRandomUnderline() {
